@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace NapilnikTask02
 {
-    class Cart
+    public class Cart
     {
         private Order _order;
         private readonly List<Cell> _cells;
@@ -45,17 +45,6 @@ namespace NapilnikTask02
             _warehouse.Ship(good, count);
         }
 
-        public override string ToString()
-        {
-            string result = "Корзина\n";
-
-            foreach (Cell cell in _cells)
-            {
-                result = result + cell.ToString() + "\n";
-            }
-
-            return result;
-        }
         public Order DoOrder(string ordernum)
         {
             _order = new Order(ordernum);
@@ -65,5 +54,10 @@ namespace NapilnikTask02
             return _order;
         }
 
+        public List<Cell> GetCells()
+        {
+            // Тут возможно нужно возвращать копию _cells
+            return _cells;
+        }
     }
 }

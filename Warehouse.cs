@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace NapilnikTask02
 {
-    class Warehouse
+    public class Warehouse
     {
         private readonly List<Cell> _storage;
         public Warehouse()
@@ -31,12 +31,6 @@ namespace NapilnikTask02
             else
                 lisItem.SubCount(count);
         }
-
-        internal void PrintRestWarehouse()
-        {
-            throw new NotImplementedException();
-        }
-
         public int GetGoodCount(Good good)
         {
             Cell Item = _storage.FirstOrDefault(cell => cell.GetGood() == good);
@@ -47,16 +41,11 @@ namespace NapilnikTask02
                 return Item.GetCount();
 
         }
-        public override string ToString()
-        {
-            string result = "Склад\n";
 
-            foreach (Cell item in _storage)
-            {
-                result = result + item.ToString() + "\n";
-            }
-
-            return result;
+        public List<Cell> GetStorage()
+        { 
+            return _storage;
         }
+
     }
 }

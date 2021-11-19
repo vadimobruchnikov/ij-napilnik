@@ -4,7 +4,7 @@ using System.Text;
 
 namespace NapilnikTask02
 {
-    class Shop
+    public class Shop
     {
         private readonly Warehouse _warehouse;
         private readonly Cart _cart;

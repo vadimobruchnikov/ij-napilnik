@@ -4,7 +4,7 @@ using System.Text;
 
 namespace NapilnikTask02
 {
-    class Cell
+    public class Cell
     {
         private readonly Good _good;
         private int _count;
@@ -49,8 +49,5 @@ namespace NapilnikTask02
 
             _count -= count;
         }
-
-        public override string ToString() => $"{_good.GetName()} - {_count}";
-
     }
 }

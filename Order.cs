@@ -4,7 +4,7 @@ using System.Text;
 
 namespace NapilnikTask02
 {
-    class Order
+    public class Order
     {
         private readonly string _ordernum;
         private readonly string _paylink;

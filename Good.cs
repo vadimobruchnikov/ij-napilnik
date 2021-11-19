@@ -4,7 +4,7 @@ using System.Text;
 
 namespace NapilnikTask02
 {
-    class Good
+    public class Good
     {
         private readonly string _name;
         public Good(string name) 
