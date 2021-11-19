@@ -11,7 +11,6 @@ namespace NapilnikTask02
         {
             _storage = new List<Cell>();
         }
-
         public void Delive(Good good, int count)
         {
             Cell newItem = new Cell(good, count);
@@ -41,11 +40,9 @@ namespace NapilnikTask02
                 return Item.GetCount();
 
         }
-
         public List<Cell> GetStorage()
         { 
             return _storage;
         }
-
     }
 }

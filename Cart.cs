@@ -18,12 +18,10 @@ namespace NapilnikTask02
 
             _warehouse = warehouse;
         }
-
         public Warehouse GetWarehouse()
         {
             return _warehouse;
         }
-
         public void Add(Good good, int count)
         {
             int Rest = _warehouse.GetGoodCount(good);
@@ -44,7 +42,6 @@ namespace NapilnikTask02
             }
             _warehouse.Ship(good, count);
         }
-
         public Order DoOrder(string ordernum)
         {
             _order = new Order(ordernum);
@@ -53,7 +50,6 @@ namespace NapilnikTask02
             
             return _order;
         }
-
         public List<Cell> GetCells()
         {
             // Тут возможно нужно возвращать копию _cells

@@ -16,7 +16,6 @@ namespace NapilnikTask02
             _warehouse = warehouse;
             _cart = new Cart(_warehouse);
         }
-
         public Cart GetCart()
         {
             return _cart;

@@ -20,7 +20,6 @@ namespace NapilnikTask02
             _good = good;
             _count = count;
         }
-
         public Good GetGood()
         {
             return _good;

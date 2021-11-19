@@ -16,7 +16,6 @@ namespace NapilnikTask02
 
             _paylink = $"{_ordernum} : RaNdOmNaYa-StRoKa";
         }
-
         public string GetPaylink()
         {
             return _paylink;
