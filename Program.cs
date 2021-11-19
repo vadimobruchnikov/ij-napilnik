@@ -7,12 +7,11 @@ namespace Napilnik1
         static void Main()
         {
 
-            Bot bot = new Bot
-            {
-                Weapon = new Weapon()
-            };
+            Weapon weaponMP5 = new Weapon(15, 10);
 
-            Player player = new Player();
+            Bot bot = new Bot(weaponMP5);
+
+            Player player = new Player(120);
 
             // bot нашел player
             bot.OnSeePlayer(player);
