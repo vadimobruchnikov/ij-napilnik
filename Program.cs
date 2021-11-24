@@ -2,12 +2,12 @@
 // ЗАДАЧА 15 ИМЕНА КЛАССОВ И ОБЪЕКТОВ должны представлять собой существительные
 // Переименуйте классы - https://gist.github.com/HolyMonkey/301475a9d6ec900584a254cee3485673
 
-// Было
+// Стало
 
-class PlayerData { }
-class GunController { }
-class FollowTarget { }
-class GetUnit
+class Player { }
+class Gun { }
+class Target { }
+class Unit
 {
-    public IReadOnlyCollection<Unit> UnitsToGet {get; private set;}
+    public IReadOnlyCollection<Unit> Units {get; private set;}
 }
