@@ -9,17 +9,17 @@
 
 // Попробуйте переназвать эти методы - https://gist.github.com/HolyMonkey/0b7021ff18da43ca46705ca3c6a3dea9
 
-public static void SetNewObject()
+public static void CreateObject()
 {
     //Создание объекта на карте
 }
 
-public static void SetChance()
+public static void SetRandomChance()
 {
     _chance = Random.Range(0, 100);
 }
 
-public static int SetSalary(int hoursWorked)
+public static int CalcSalary(int hoursWorked)
 {
     return _hourlyRate * hoursWorked;
 }
