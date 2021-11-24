@@ -7,7 +7,7 @@
 class Player { }
 class Gun { }
 class Target { }
-class Unit
+class Units
 {
     public IReadOnlyCollection<Unit> Units {get; private set;}
 }
