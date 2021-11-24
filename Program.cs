@@ -26,7 +26,7 @@ class Weapon
 
     private int _bullets;
 
-    public bool CanShoot() => _bullets >= MinimalBullets;
+    public bool CanFire() => _bullets >= MinimalBullets;
 
-    public void Shoot() => _bullets -= BulletsOnShoot;
+    public void Fire() => _bullets -= BulletsOnShoot;
 }
