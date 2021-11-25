@@ -7,7 +7,7 @@ namespace Napilnik1
     public class Player
     {
         private int _health;
-        public bool IsAlive() => _health > 0;
+        public bool CanDamaged() => _health > 0;
 
         public Player(int health)
         {
@@ -17,11 +17,7 @@ namespace Napilnik1
 
             _health = health;
         }
-        private bool CanDamaged()
-        {
-            return _health > 0;
-        }
-
+        
         public void TakeDamage(int damage)
         {
             if (damage <= 0)

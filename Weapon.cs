@@ -32,7 +32,7 @@ namespace Napilnik1
 
         public void FireOnPlayer(Player player)
         {
-            if (player.IsAlive() && CanFire())
+            if (CanFire())
             {
                 _bullets -= 1;
                 player.TakeDamage(_damage);
