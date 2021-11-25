@@ -1,3 +1,4 @@
+﻿using System;
 
 // ЗАДАЧА ЗАМЕНА УСЛОВНОЙ ЛОГИКИ ПОЛИМОРФИЗМОМ
 
@@ -5,8 +6,6 @@
 // Необходимо зафиксировать интерфейс платежёной системы и сокрыть их многообразие под какой-нибудь сущностью. Например фабрикой (или фабричным методом).
 // Важное условие: пользователь вводит именно идентификатор платёжной системы.
 // https://gist.github.com/HolyMonkey/14f78ed72bda289980fce43f50143278
-
-using System;
 
 namespace IMJunior
 {
@@ -25,6 +24,8 @@ namespace IMJunior
                 Console.WriteLine("Вызов API WebMoney...");
             else if (systemId == "Card")
                 Console.WriteLine("Вызов API банка эмитера карты Card...");
+            else 
+                Console.WriteLine("Неправильная система оплаты!");
 
             paymentHandler.ShowPaymentResult(systemId);
         }
