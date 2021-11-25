@@ -7,6 +7,8 @@ namespace Napilnik1
     public class Player
     {
         private int _health;
+        public bool IsAlive() => _health > 0;
+
         public Player(int health)
         {
             // Если только мы не пишем игру про зомби
