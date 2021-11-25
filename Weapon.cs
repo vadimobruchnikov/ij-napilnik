@@ -12,6 +12,10 @@ namespace Napilnik1
         public Weapon(int damage, int bullets)
         {
             _damage = damage;
+
+            if (bullets < 0)
+                throw new ArgumentOutOfRangeException(nameof(bullets));
+
             _bullets = bullets;
         }
 
@@ -26,7 +30,7 @@ namespace Napilnik1
             return (_damage > 0) && (_bullets > 0);
         }
 
-        public void Fire(Player player)
+        public void FireOnPlayer(Player player)
         {
             if (CanFire())
             {

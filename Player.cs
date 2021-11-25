@@ -9,6 +9,10 @@ namespace Napilnik1
         private int _health;
         public Player(int health)
         {
+            // Если только мы не пишем игру про зомби
+            if (health <= 0)
+                throw new ArgumentOutOfRangeException(nameof(health));
+
             _health = health;
         }
         private bool CanDamaged()
@@ -18,6 +22,9 @@ namespace Napilnik1
 
         public void TakeDamage(int damage)
         {
+            if (damage <= 0)
+                throw new ArgumentOutOfRangeException(nameof(damage));
+
             if (CanDamaged())
             {
                 _health -= damage;

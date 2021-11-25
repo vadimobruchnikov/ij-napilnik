@@ -10,12 +10,18 @@ namespace Napilnik1
 
         public Bot(Weapon weapon)
         {
+            if (weapon == null)
+                throw new NullReferenceException(nameof(weapon));
+
             _weapon = weapon;    
         }
 
         public void OnSeePlayer(Player player)
         {
-            _weapon.Fire(player);
+            if (player == null)
+                throw new NullReferenceException(nameof(player));
+
+            _weapon.FireOnPlayer(player);
         }
     }
 }
