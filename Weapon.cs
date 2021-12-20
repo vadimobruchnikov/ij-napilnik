@@ -30,13 +30,15 @@ namespace Napilnik1
             return (_damage > 0) && (_bullets > 0);
         }
 
-        public void FireOnPlayer(Player player)
+        public void Fire(Player player)
         {
             if (CanFire())
             {
                 _bullets -= 1;
                 player.TakeDamage(_damage);
-
+            }
+            else {
+                throw new InvalidOperationException("Невозможно выстрелить");
             }
         }
     }

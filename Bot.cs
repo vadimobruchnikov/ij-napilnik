@@ -21,7 +21,7 @@ namespace Napilnik1
             if (player == null)
                 throw new NullReferenceException(nameof(player));
 
-            _weapon.FireOnPlayer(player);
+            _weapon.Fire(player);
         }
     }
 }
