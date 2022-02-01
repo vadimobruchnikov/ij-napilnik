@@ -6,9 +6,6 @@ namespace Napilnik1
 {
     public class Player
     {
-        private int _health;
-        public bool CanDamaged() => _health > 0;
-
         public Player(int health)
         {
             // Если только мы не пишем игру про зомби
@@ -18,6 +15,9 @@ namespace Napilnik1
             _health = health;
         }
         
+        private int _health;
+        public bool CanDamaged() => _health > 0;
+
         public void TakeDamage(int damage)
         {
             if (damage <= 0)
@@ -26,8 +26,9 @@ namespace Napilnik1
             if (CanDamaged())
             {
                 _health -= damage;
+            } else {
+                throw new InvalidOperationException("Невозможно выстрелить");
             }
         }
     }
-
 }

@@ -21,13 +21,13 @@ namespace Napilnik1
 
         private bool CanFire()
         {
-            if (_damage < 0)
-                throw new ArgumentOutOfRangeException("Отрицательный дамаг");
+            if (_damage <= 0)
+                throw new ArgumentOutOfRangeException("Неправильный дамаг");
 
-            if (_bullets < 0)
-                throw new ArgumentOutOfRangeException("Отрицательное значение пуль");
+            if (_bullets <= 0)
+                throw new ArgumentOutOfRangeException("Неправильное значение пуль");
 
-            return (_damage > 0) && (_bullets > 0);
+            return true;
         }
 
         public void Fire(Player player)
